@@ -1,6 +1,6 @@
 export default function PersonalDetails() {
   const rows = [
-    ["Date of birth", "23 Aug 1992"],
+    ["Date of birth", "1992"],
     ["Spoken Languages", "English · Hindi · Telugu"],
     ["Nationality", "Indian"],
     ["Interest", "Swimming · Cooking · Photography · Technology"],

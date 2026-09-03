@@ -60,3 +60,10 @@ npm run preview
 - Navigation between "pages" is done with simple React state in `App.jsx` — swap in
   `react-router-dom` if you want real URLs per page.
 - Styling uses Tailwind CSS utility classes throughout.
+
+
+//Email JS Config
+
+https://dashboard.emailjs.com/sign-in
+porella.abhilash@gmail.com
+Pradhyumna@6202

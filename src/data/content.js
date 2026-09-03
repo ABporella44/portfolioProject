@@ -73,8 +73,8 @@ export const TIMELINE = [
 export const EDUCATION = [
     { year: "2018 Jan — 2019 Dec", title: "Executive Masters in Information Technology and Security Assurance", place: "University of Cumberlands",icon: GraduationCap, color: "#3CA86E",
     desc: "Professional Executive Masters in Information Technology and Security Assurance.", icon: GraduationCap, color: "#E8B23C" },
-  { year: "2015 Aug — 2016 Dec", title: "Masters of Technology", place: "Sanfransico University",icon: GraduationCap, color: "#3CA86E",
-    desc: "Masters in Computer Science Engineering.", icon: GraduationCap, color: "#E8B23C" },
+  { year: "2015 Aug — 2016 Dec", title: "Masters of Technology", place: "Sanfransico Bay University",icon: GraduationCap, color: "#3CA86E",
+    desc: "Master of science in computer Science.", icon: GraduationCap, color: "#E8B23C" },
   { year: "2010 — 2014", title: "Bachelor of Technology", place: "Malla Reddy Engineering College", University:"Jawharlal Nehru Technological University, Hyderabad",icon: GraduationCap, color: "#3CA86E",
     desc: "Undergraduate computer applications degree with a focus on web technologies.", icon: GraduationCap, color: "#E8B23C" },
   {year:'2008 — 2010', title: "Intermediate / Pre-University", place: "KLN Junior College, Miryalaguda",desc: "Maths, Physics, Chemistry.", icon: BookOpen, color: "#E8B23C"},

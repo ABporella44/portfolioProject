@@ -1,20 +1,40 @@
 import { useState } from "react";
-import { Phone, Mail, MapPin, Send } from "lucide-react";
+import { Phone, Mail, MapPin, Send, Loader2 } from "lucide-react";
+import emailjs from '@emailjs/browser';
 
 const inputCls =
   "w-full bg-[#F8FAFC] border border-slate-200 rounded-md px-4 py-3 text-sm text-slate-700 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-400";
 
+const emptyForm = { name: "", email: "", subject: "", contact: "", message: "" };
+
 export default function ContactForm() {
-  const [form, setForm] = useState({ name: "", email: "", subject: "", contact: "", message: "" });
+  const [form, setForm] = useState(emptyForm);
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [emailMessage, setEmailMessage] = useState("");
 
   const update = (key) => (e) => setForm((f) => ({ ...f, [key]: e.target.value }));
 
   const submit = (e) => {
     e.preventDefault();
-    setSent(true);
-    setTimeout(() => setSent(false), 3000);
-    setForm({ name: "", email: "", subject: "", contact: "", message: "" });
+    setLoading(true);
+    setEmailMessage("");
+
+    emailjs
+      .send('service_hxl8lug', 'template_7xvaupi', form, 'LFL5N4_l7Hja4bHkD')
+      .then(() => {
+        setEmailMessage("Email sent successfully! You will receive a response within 24 hours.");
+        setSent(true);
+        setForm(emptyForm);
+      })
+      .catch(() => {
+        setEmailMessage("Error sending email, please try again later.");
+        setSent(false);
+      })
+      .finally(() => {
+        setLoading(false);
+        setTimeout(() => setEmailMessage(""), 3000);
+      });
   };
 
   return (
@@ -39,11 +59,11 @@ export default function ContactForm() {
             <div className="grid sm:grid-cols-2 gap-5">
               <div>
                 <label className="text-xs font-semibold text-slate-600 mb-1.5 block">Subject</label>
-                <input value={form.subject} onChange={update("subject")} placeholder="Your subject" className={inputCls} />
+                <input required value={form.subject} onChange={update("subject")} placeholder="Your subject" className={inputCls} />
               </div>
               <div>
                 <label className="text-xs font-semibold text-slate-600 mb-1.5 block">Contact</label>
-                <input value={form.contact} onChange={update("contact")} placeholder="+00 1234 5678 90" className={inputCls} />
+                <input required value={form.contact} onChange={update("contact")} placeholder="+00 1234 5678 90" className={inputCls} />
               </div>
             </div>
             <div>
@@ -59,11 +79,27 @@ export default function ContactForm() {
             </div>
             <button
               type="submit"
-              className="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold px-6 py-3 rounded-md transition-colors"
+              disabled={loading}
+              className="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-600 disabled:opacity-70 disabled:cursor-not-allowed text-white font-semibold px-6 py-3 rounded-md transition-colors"
             >
-              <Send size={15} /> Send message
+              {loading ? (
+                <>
+                  <Loader2 size={15} className="animate-spin" /> Sending...
+                </>
+              ) : (
+                <>
+                  <Send size={15} /> Send message
+                </>
+              )}
             </button>
-            {sent && <p className="text-sm text-emerald-600 font-medium">Thanks — your message has been noted.</p>}
+            {emailMessage && (
+              <p
+                className="text-sm font-medium"
+                style={{ color: sent ? "#059669" : "#f50000" }}
+              >
+                {emailMessage}
+              </p>
+            )}
           </form>
         </div>
 
