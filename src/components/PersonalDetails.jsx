@@ -15,15 +15,22 @@ export default function PersonalDetails() {
           </h3>
           <p className="text-slate-500 mt-4 leading-relaxed">
             I'm a product-minded frontend developer who cares as much about how an interface feels
-            as how it's built. Off-screen you'll usually find me reading, hiking, or tinkering with
-            a synth.
+            as how it's built. I'm currently at Tech Mahindra, working with the Brightspeed client
+            to customize their telecom business support application built on IQGEO. My day-to-day
+            involves gathering requirements, implementing demos and sprint improvements within an
+            Agile workflow, and leading the frontend team &mdash; helping peers understand
+            requirements clearly so we consistently deliver on client expectations. Off-screen
+            you'll usually find me reading, hiking, or tinkering with a synth.
           </p>
         </div>
         <div className="space-y-4">
           {rows.map(([label, value]) => (
-            <div key={label} className="flex justify-between border-b border-slate-100 pb-3">
-              <span className="text-slate-600 font-medium">{label}</span>
-              <span className="text-cyan-600">{value}</span>
+            <div
+              key={label}
+              className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between border-b border-slate-100 pb-3"
+            >
+              <span className="text-slate-600 font-medium shrink-0">{label}</span>
+              <span className="text-cyan-600 sm:text-right">{value}</span>
             </div>
           ))}
         </div>
