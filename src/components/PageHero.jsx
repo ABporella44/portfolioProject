@@ -9,7 +9,7 @@ export default function PageHero({ label }) {
         }}
       />
       <h1 className="relative text-center text-4xl sm:text-5xl font-extrabold text-white tracking-wide">
-        {"What My Clients Say About Me"}
+        {"Get in touch with me for your next project!"}
       </h1>
       <svg className="absolute -bottom-1 left-0 w-full" viewBox="0 0 1440 60" preserveAspectRatio="none">
         <path d="M0,60 C480,0 960,0 1440,60 L1440,60 L0,60 Z" fill="#F8FAFC" />
