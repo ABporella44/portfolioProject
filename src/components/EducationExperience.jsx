@@ -18,7 +18,8 @@ export default function EducationExperience() {
               {EDUCATION.map((e, i) => (
                 <div key={i} className="flex items-start gap-5 bg-white rounded-xl border border-slate-100 p-6 hover:shadow-md transition-shadow">
                   <div className="w-12 h-12 rounded-lg flex items-center justify-center shrink-0" style={{ background: `${e.color}1A` }}>
-                    <e.icon size={20} style={{ color: e.color }} />
+                    {e.image && <img src={e.image} alt={e.title} className="w-full h-full object-cover rounded-lg" />}
+                    {!e.image && <e.icon size={20} style={{ color: e.color }} />}
                   </div>
                   <div>
                     <div className="flex flex-wrap items-center justify-between gap-2 mb-1">

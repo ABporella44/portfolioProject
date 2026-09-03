@@ -72,14 +72,14 @@ export const TIMELINE = [
 
 export const EDUCATION = [
     { year: "2018 Jan — 2019 Dec", title: "Executive Masters in Information Technology and Security Assurance", place: "University of Cumberlands",icon: GraduationCap, color: "#3CA86E",
-    desc: "Professional Executive Masters in Information Technology and Security Assurance.", icon: GraduationCap, color: "#E8B23C" },
-  { year: "2015 Aug — 2016 Dec", title: "Masters of Technology", place: "Sanfransico Bay University",icon: GraduationCap, color: "#3CA86E",
-    desc: "Master of science in computer Science.", icon: GraduationCap, color: "#E8B23C" },
+    desc: "Professional Executive Masters in Information Technology and Security Assurance.", icon: GraduationCap, color: "#E8B23C",image:'./uc.jpeg' },
+  { year: "2015 Aug — 2016 Dec", title: "Masters of Science", place: "Sanfransico Bay University i.e North Western Polytechnic Univeristy",icon: GraduationCap, color: "#3CA86E",
+    desc: "Master of science in computer Science.", icon: GraduationCap, color: "#E8B23C",image:'./npu-seal.png' },
   { year: "2010 — 2014", title: "Bachelor of Technology", place: "Malla Reddy Engineering College", University:"Jawharlal Nehru Technological University, Hyderabad",icon: GraduationCap, color: "#3CA86E",
-    desc: "Undergraduate computer applications degree with a focus on web technologies.", icon: GraduationCap, color: "#E8B23C" },
-  {year:'2008 — 2010', title: "Intermediate / Pre-University", place: "KLN Junior College, Miryalaguda",desc: "Maths, Physics, Chemistry.", icon: BookOpen, color: "#E8B23C"},
+    desc: "Undergraduate computer applications degree with a focus on web technologies.", icon: GraduationCap, color: "#E8B23C",image:'./mrec.jpg' },
+  {year:'2008 — 2010', title: "Intermediate / Pre-University", place: "KLN Junior College, Miryalaguda",desc: "Maths, Physics, Chemistry.", icon: BookOpen, color: "#E8B23C",image:'./kln.png'},
   { year: "2007 — 08", title: "High / Higher Secondary School", place: "Pragathi Vidyalayam, Nereducherla",
-    desc: "Completed secondary education with a focus on mathematics and computing.", icon: Trophy, color: "#E8607A" },
+    desc: "Completed secondary education with a focus on mathematics and computing.", icon: Trophy, color: "#E8607A" ,image:'./pv.png'},
 ];
 
 export const PROJECT_FILTERS = ["All", "Angular", "React"];

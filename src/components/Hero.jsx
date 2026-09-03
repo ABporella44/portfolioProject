@@ -12,17 +12,19 @@ export default function Hero({ setPage }) {
   <div className="w-72 h-80 sm:w-80 sm:h-96 overflow-hidden shadow-xl bg-orange-100">
     <img
       src="/MyImage.png"
-      alt="David Williamson, freelance developer"
+      fetchpriority="high" 
+      alt="Abhilash Porella, freelance developer"
       className="w-full h-full object-cover object-top"
     />
   </div>
 </div>
 
         <div>
-          <p className="text-slate-500 font-medium mb-3">Hi, I'm Abhilash Porella</p>
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-900 leading-tight mb-6">
-            I'm a freelance <TypedRole />
-          </h1>
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-900 leading-tight mb-6">Hi, I'm <span className="text-cyan-500">Abhilash Porella</span></h1>
+          <h3 className="text-4xl sm:text-3xl font-extrabold text-slate-900 leading-tight mb-6">
+            I'm a freelance<h5><TypedRole/></h5>
+          </h3>
+          
           <p className="text-slate-500 mb-8 max-w-md">
             I build fast, accessible interfaces and the systems behind them — from first component
             to production deploy.

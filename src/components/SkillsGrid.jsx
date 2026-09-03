@@ -1,5 +1,6 @@
 import SectionHeading from "./SectionHeading.jsx";
 import { SKILLS } from "../data/content.js";
+import AlsoProficientIn from "./AlsoProficientIn.jsx";
 
 export default function SkillsGrid() {
   return (
@@ -28,6 +29,9 @@ export default function SkillsGrid() {
               </div>
             </div>
           ))}
+        </div>
+        <div>
+          <AlsoProficientIn />
         </div>
       </div>
     </section>
