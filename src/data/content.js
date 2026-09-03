@@ -6,7 +6,7 @@ import {
 
 
 
-export const NAV_ITEMS = ["Home", "About", "Services", "Resume", "Projects", "Customer Review", "Contact"];
+export const NAV_ITEMS = ["Home", "About", "Services", "Resume", "Projects", "Contact"];
 
 export const SKILLS = [
   { name: "React", exp: "7 Years Experience", icon: Atom, color: "#61DAFB" },
